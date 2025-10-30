@@ -327,7 +327,7 @@ async def drm_handler(bot: Client, m: Message):
            
             # Build watermark postprocessor arguments if watermark is enabled
             if vidwatermark != "/d":
-                watermark_filter = f"drawtext=fontfile=vidwater.ttf:text='{vidwatermark}':fontcolor=black@0.7:fontsize=h/6:x=(w-text_w)/2:y=(h-text_h)/2"
+                watermark_filter = f"drawtext=fontfile=vidwater.ttf:text='{vidwatermark}':fontcolor=black@0.7:fontsize=h/12:x=(w-text_w)/2:y=(h-text_h)/2"
                 postprocessor = f'--postprocessor-args "ffmpeg:-vf {watermark_filter} -c:v libx264 -preset ultrafast -crf 23 -c:a copy"'
             else:
                 postprocessor = ""
