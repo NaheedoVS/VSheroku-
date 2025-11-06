@@ -143,3 +143,4 @@ def register_settings_handlers(bot):
             await editable.edit(f"<b>❌ Failed to set speed:</b>\n<blockquote expandable>{str(e)}</blockquote>", reply_markup=keyboard)
         finally:
             await input_msg.delete()
+            
