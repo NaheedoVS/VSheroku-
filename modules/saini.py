@@ -150,7 +150,7 @@ async def decrypt_and_merge_video(mpd_url, keys_string, output_path, output_name
             )
 
             # use globals.crf_value for compression
-            crf = int(getattr(globals, "crf_value", 18))
+            crf = int(getattr(globals, "crf_value", 23))
             # Compose ffmpeg command:
             # if audio exists, map it and copy; else include only video
             if audio_file:
@@ -213,7 +213,7 @@ async def send_vid(bot: Client, m: Message, cc, filename, vidwatermark, thumb, n
                 speed=globals.watermark_speed,
                 fontsize_expr="h/18"
             )
-            crf = int(getattr(globals, "crf_value", 18))
+            crf = int(getattr(globals, "crf_value", 23))
             tmp_out = f"{os.path.splitext(filename)[0]}__wm.mp4"
             if os.path.exists(tmp_out):
                 os.remove(tmp_out)
