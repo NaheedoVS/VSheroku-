@@ -17,7 +17,7 @@ from authorisation import register_authorisation_handlers
 from broadcast import register_broadcast_handlers
 from commands import register_command_handlers
 from drm_handler import register_drm_handlers
-from feature import register_features_handlers
+from features import register_features_handlers
 from html_handler import register_html_handlers
 from logs import register_logs_handlers
 from saini import build_watermark_filter
