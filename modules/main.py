@@ -13,7 +13,7 @@ import globals
 from vars import API_ID, API_HASH, BOT_TOKEN, OWNER, CREDIT
 
 # Import modules
-
+from authorisation import register_authorisation_handlers
 from broadcast import register_broadcast_handlers
 from commands import register_command_handlers
 from drm_handler import register_drm_handlers
