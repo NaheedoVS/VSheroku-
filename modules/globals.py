@@ -25,7 +25,7 @@ watermark_speed = 100
 watermark_position = "center"  # "center" or "bottom-right" (used when movement == none)
 
 # CRF (video compression) default: 18 (near-lossless)
-crf_value = 18
+crf_value = 23
 
 raw_text2 = '480'
 quality = '480p'
