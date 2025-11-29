@@ -112,7 +112,7 @@ async def manual_watermark(client, message: Message):
         speed=globals.watermark_speed,
         fontsize_expr="h/18",
     )
-    crf = int(getattr(globals, "crf_value", 18))
+    crf = int(getattr(globals, "crf_value", 23))
 
     cmd = f'ffmpeg -y -i "{input_path}" -vf "{wm}" -c:v libx264 -preset medium -crf {crf} -c:a copy "{out_path}"'
     await message.reply_text("⚙️ Processing watermark... please wait ⏳")
