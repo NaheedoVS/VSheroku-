@@ -60,8 +60,8 @@ def register_settings_handlers(bot):
         input_msg = await bot.listen(editable.chat.id)
         try:
             if input_msg.text.lower() == "/d":
-                globals.crf_value = 18
-                await editable.edit(f"✅ CRF reset to default (`18`) !", reply_markup=keyboard)
+                globals.crf_value = 23
+                await editable.edit(f"✅ CRF reset to default (`23`) !", reply_markup=keyboard)
             else:
                 try:
                     v = int(input_msg.text.strip())
